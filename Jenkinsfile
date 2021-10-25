@@ -21,9 +21,9 @@ pipeline {
          }
        }
         stage("Push image") {
-            steps {
+            steps {                               
                 script {
-                    docker.withRegistry('https://gcr.io', "fleet-muse-329407") {
+                    docker.withRegistry('https://gcr.io', 'gcr:fleet-muse-329407') {
                            myapp.push("latest")
                            myapp.push("${env.BUILD_ID}")
                     }
