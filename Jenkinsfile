@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'fleet-muse-329407'
         CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1-c'
-        CREDENTIALS_ID = 'fleet-muse-329407-4cadc5b2b072.json'
+        CREDENTIALS_ID = 'fleet-muse-329407-4cadc5b2b072'
         //REGISTRY= 'juileekaloti1/hello'
     }
     stages {
@@ -23,7 +23,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://gcr.io', "fleet-muse-329407-4cadc5b2b072.json") {
+                    docker.withRegistry('https://gcr.io', "fleet-muse-329407-4cadc5b2b072") {
                            myapp.push("latest")
                            myapp.push("${env.BUILD_ID}")
                     }
