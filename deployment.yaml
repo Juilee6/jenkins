@@ -23,9 +23,9 @@ kind: Service
 metadata:
   name: hello
 spec:
-  ports:
-  - port: 5000
-    protocol: TCP
-    targetPort: 5000
   selector:
     app: hello
+  ports:
+    - port: 8765
+      targetPort: 9376
+  type: LoadBalancer
