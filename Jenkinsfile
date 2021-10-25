@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'fleet-muse-329407'
         CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1-c'
-        CREDENTIALS_ID = 'fleet-muse-329407'
+        CREDENTIALS_ID = 'My First Project'
         //REGISTRY= 'juileekaloti1/hello'
     }
     stages {
